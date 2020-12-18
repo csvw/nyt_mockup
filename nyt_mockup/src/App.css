@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+body {
+  font-family: "Georgia";
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 7%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.userOptionsWest, .userOptionsCenter, .userOptionsEast {
+  display: flex;
+  flex-direction: row;
+}
+
+.userOptionsEast, .mainHeaderEast {
+  justify-self: flex-end;
+}
+
+.userOptionsCenter, .mainHeaderCenter {
+  justify-self: center;
+}
+
+.mainHeaderWest, .mainHeaderCenter, .mainHeaderEast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.userOptions, .mainHeader {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.userOptions {
+  margin-bottom: 20px;
+}
+
+.dow, .nasdaq {
+  display: none;
+}
+
+.weather {
+  display: flex;
+}
+
+@font-face {
+  font-family: "Canterbury-Regular";
+  src: url("./fonts/Canterbury.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Canterbury.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Canterbury.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/Canterbury.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Canterbury.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/Canterbury.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Canterbury.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lightHr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #CCCCCC;
+  border: none;
+}
+
+.darkHr {
+  display: block;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: black;
+}
+
+/* .doubleHr {
+  display: block;
+  width: 100%;
+  background: black;
+} */
+
+.mainHeaderCenter {
+  font-family: 'Canterbury-Regular';
+  font-size: 5rem;
+}
+
+.topicsBar {
+  display: flex;
+  justify-content: center;
+}
+
+.topic {
+  margin: 7px;
+}
+
+.featuredItems {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.userOptionsWest * {
+  margin-right: 14px;
+}
+
+.languageOption {
+  margin:  0px 7px;
+}
+
+.risingFast {
+  color: green;
+}
+
+.mainHeaderEast * {
+  padding-bottom: 1px;
+}
+
+.mainHeaderEast {
+  align-items: flex-end;
+}
+
+.weather {
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.weather * {
+  padding-right: 18px;
+}
+
+.lowTemp {
+  padding-right: 0px;
+}
+
+.highTemp, .lowTemp {
+  font-size: 0.8rem;
+}
+
+.lowTemp {
+  color: gray;
+}
+
+.stocks {
+  font-size: 0.85rem;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.sp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stockLayout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.playCrossword {
+  background: #427fca;
+  padding: 15px 13px;
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 15px;
+  letter-spacing: -0.5px;
+}
+
+.userOptions {
+  align-items: center;
+}
+
+.dateHeading {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.userOptionsEast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userOptionsWest * {
+  font-size: 1.25rem;
+  margin-right: 25px;
+}
+
+.featuredItem {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.bookReview, .dailyHighlights {
+  border-right: 1px solid gray;
+  margin-right: 20px;
+}
+
+.thumbnail {
+  margin-right: 10px;
+}
+
+.featureTitle {
+  font-weight: bold;
+  font-size: 1.05rem;
+  padding-bottom: 5px;
+}
+
+.featuredItems {
+  padding-bottom: 7px;
+  border-bottom: 3px double black;
+}
+
+/* END HEADER */
+/* BEGIN MAIN CONTENT */
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 65% 1px 35%;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.authorImage {
+  border-radius: 100%;
+  float: right;
+  margin: 5px;
+}
+
+.authorName {
+  margin: 5px 5px 5px 0px;
+  font-size: 1.25rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: #AAAAAA;
+}
+
+.opinionTitle {
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.subEditorials {
+  display: grid;
+  grid-template-columns: 50% 1px 50%;
+}
+
+.opinionCardContainer {
+  margin: 15px;
+  /* border-bottom: 1px solid silver; */
+}
+
+.divider {
+  background: silver;
+  height: 100%;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.opinionDivider {
+  background: silver;
+  height: 1px;
+  margin-top: 15px;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+.opinion {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.bigStoryImage {
+  width: 600px;
+  padding: 25px;
+}
+
+.bigStoryContainer {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  margin-right: 25px;
+}
+
+.bigStoryTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 25px;
+  padding-top: 25px;
+  line-height: 1.35;
+}
+
+.bigStoryTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+
+.storyReelContainer {
+  margin-top: 25px;
+  margin-right: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.firstStoryTitle {
+  font-size: 1.35rem;
+}
+
+.firstStory {
+  width: 150%;
+}
+
+.bigStoryText, .storyReelText, .secondStoryText {
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li:before {
+  color: #333333;
+  content: "•";
+  padding-right: 8px;
+}
+
+li {
+  padding-bottom: 25px;
+}
+
+.bigStoryTextDivider {
+  height: 1px;
+  background: silver;
+  margin-bottom: 25px;
+}
+
+.bigStoryDivider {
+  width: 2px;
+  background: silver;
+  margin: 25px 0px;
+}
+
+.bigStorySubtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.imageContainer .bigStoryText {
+  margin: 25px;
+  line-height: 1.35;
+}
+
+.storyReelContainer {
+  display: grid;
+  grid-template-columns: 30% 3% 32% 3% 32%;
+  margin-right: 25px;
+  border-bottom: 1px solid black;
+  /* background: black; */
+}
+
+.storyReelDivider {
+  justify-self: center;
+  background: silver;
+  height: 90%;
+  width: 1px;
+}
+
+.firstStory {
+  max-width: 100%;
+  line-height: 1.35;
+  font-size: 1.1rem;
+}
+
+.firstStoryTitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.secondStoryContainer {
+  max-width: 100%;
+  margin-left: 25px;
+}
+
+.secondStoryTitle {
+  font-size: 1.15rem;
+  font-weight: bold;
+  max-width: 100%;
+  padding-bottom: 25px;
+}
+
+.secondStoryText {
+  font-size: 1.1;
+  max-width: 100%;
+  line-height: 1.35;
+}
+
+/* .editorialDivider {
+  border-bottom: 3px double black;
+  height: 50px;
+  width: 100%;
+} */
